@@ -1,0 +1,23 @@
+#!/bin/bash 
+jar=/home/nhoss001/preprocess.jar
+class=InnerJoin
+reducers=8
+
+echo "Running "$class" with "$reducers" reducers"
+sleep 2
+
+#Locations Path
+pathToStations=locations
+#Temperature Data Path
+pathToData=inputdata
+#Result Path
+result=output
+
+hadoop jar $jar $class $pathToData $pathToStations $result $reducers
+clear
+
+echo "Ready to show result..."
+sleep 3
+
+clear
+hdfs dfs -cat $result/part-r-00000
