@@ -1,7 +1,11 @@
 # Big-Data-Analysis-with-Hadoop-
 
 Project Summary:
+
 For this project, we will have two datasets. The first provides station information for weather stations across the world. The second provides individual recordings for the stations over a 4-year period. The goal of the project is to find out which states in the US have the most stable temperature (i.e. their hottest month and coldest month have the least difference).
+
+
+Solution description:
 
 <Overall description of the mapreduce jobs>
 We chose to implement 3 jobs, because in the first job we calculated the average temperature for each month for each US state for each different station id.
